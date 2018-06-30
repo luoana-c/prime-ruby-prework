@@ -17,7 +17,7 @@ end
 def prime?(number)
   remainder_arr = remainder(number)
   prime = true
-  if remainder_arr.include?(0) 
+  if number < 1 || remainder_arr.include?(0) 
     prime = false
   end
   prime
