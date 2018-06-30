@@ -3,5 +3,6 @@ def prime?(number)
   for item in range
     if number % item != 0 
       true
+    end
   
 end
