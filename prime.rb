@@ -1,18 +1,24 @@
+def range_array(number)
+  test_num = (2..(number - 1)).to_a
+  test_num
+end
+
+def remainder(number)
+  test_num = range_array(number)
+  new_array = []
+  for item in test_num
+    rem = number % item
+    new_array.push(rem)
+  end 
+  new_array
+end
+
+
 def prime?(number)
-  range = (2..number-1).to_a
-  bool_array =[]
-  divide = false
-  prime = false
-  for item in range
-    if number % item != 0 
-      divide = true
-      bool_array.push(divide)
-    end
-  end
-  if bool_array.include?(false)
+  remainder_arr = remainder(number)
+  prime = true
+  if remainder_arr.include?(0) && number > 1
     prime = false
-  else 
-    prime = true
   end
   prime
 end
