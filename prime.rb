@@ -4,5 +4,6 @@ def prime?(number)
     if number % item != 0 
       true
     end
+  end
   
 end
